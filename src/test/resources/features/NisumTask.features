@@ -9,4 +9,4 @@ Feature: Test feature file
     When Go to "https://www.google.com" and Type "Nisum Pakistan"
     Then Web page loads
     And pick Nisum Address
-    And Assert both addressess
+    And Assert both addresses

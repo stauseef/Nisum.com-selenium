@@ -1,24 +1,23 @@
 package definitions;
 
-import cucumber.api.PendingException;
+
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import dbmanager.DataBaseCon;
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+import pages.Google;
+import pages.NisumSite;
 import resources.Utilities;
 
+
 import java.io.IOException;
-import java.time.Duration;
-import java.util.NoSuchElementException;
+
+
 import java.util.concurrent.TimeUnit;
 
 public class Stepdefinitions extends Utilities {
@@ -26,77 +25,93 @@ public class Stepdefinitions extends Utilities {
     public String baseUrl;
     public String nisumAddress;
     public String googleAddress;
-    static WebDriver driver;
+    public WebElement mainDiv;
+
+
+    /*
+    This block take you to the Nisum website "Nisum.com"
+     */
 
     @Given("^Go to nisum's website$")
     public void goToNisumSWebsite() throws IOException {
-        DataBaseCon db = new DataBaseCon();
-        db.initConnection("jdbc:mysql://db4free.net:3306", "akashdktyagi", "akashdktyagi");
 
+        Utilities.initialization();
         baseUrl = getGlobalValues("baseUrl");
-        String dirPath = System.getProperty("user.dir");
-        System.setProperty("webdriver.gecko.driver", dirPath + "\\src\\test\\java\\drivers\\geckodriver.exe");
-        driver = new FirefoxDriver();
-        WebDriverWait wait = new WebDriverWait(driver, 20);
         driver.get(baseUrl);
-        if (windowMaximize == false) {
-            driver.manage().window().maximize();
-            windowMaximize = true;
-        }
 
     }
+
+    /*
+            This method is related to section that needs to be performed on UI
+     */
 
     @When("^Select \"([^\"]*)\" From Our offices seciton$")
     public void selectFromOurOfficesSeciton(String country) {
-        // Write code here that turns the phrase above into concrete actions
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,3500)");
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", driver.findElement(By.id("block-block-6")));
         WebElement searchCountry = driver.findElement(By.linkText(country));
-        searchCountry.click();
-        WebElement mainDiv = driver.findElement(By.id("pills-pakistan"));
-        nisumAddress = mainDiv.findElement(By.cssSelector("span")).getText();
+        NisumSite nisumSite = new NisumSite();
+        nisumSite.clickOnCountryOption();
+        mainDiv = nisumSite.mainDivNisum;
+
 
     }
+
+    /*
+    In this snippet we are saving address of Karachi office mentioned on website
+     */
 
     @Then("^Save \"([^\"]*)\" office address$")
     public void saveOfficeAddress(String arg0) {
-
+        nisumAddress = mainDiv.findElement(By.cssSelector("span")).getText();
     }
 
+    /*
+    This snippet does the other part of task. Over here we are navigating our initiated driver instance
+    desired link that is provided by the first variable of Gherkin script
+     */
+    /* @Params
+        website = Desired link to go to
+        searchKey = Text needs to be searched
+     */
     @When("^Go to \"([^\"]*)\" and Type \"([^\"]*)\"$")
     public void goToAndType(String website, String searchKey) {
         driver.navigate().to(website);
-        WebElement as = driver.findElement(By.cssSelector("input[name='q']"));
-        as.sendKeys(searchKey);
-        as.submit();
+        Google g = new Google();
+        g.search(searchKey);
+
 
     }
+
+    /*
+    Here we are just verifying desired page got loaded
+     */
 
     @Then("^Web page loads$")
     public void webPageLoads() {
-        // WebDriverWait  wait = new WebDriverWait(driver,10);
-        /*Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
-                .withTimeout(10, TimeUnit.SECONDS)
-                .pollingEvery(5, TimeUnit.SECONDS)
-                .ignoring(NoSuchElementException.class);*/
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        WebElement div = driver.findElement(By.className("i4J0ge"));
+
+        Google g = new Google();
+        g.webPageLoadsPage();
 
     }
 
+    /*
+    This belongs to pick Nisum Pakistan's address from recently navigated link
+     */
     @And("^pick Nisum Address$")
     public void pickNisumAddress() {
-        WebElement div = driver.findElement(By.className("i4J0ge"));
-        googleAddress = div.findElement(By.cssSelector("span[class='LrzXr']")).getText();
+        Google gog = new Google();
+        googleAddress = gog.getAddress();
+
     }
 
-    @And("^Assert both addressess$")
+    /*
+    This snippet is the core of this code. Here we are asserting both addresses
+     */
+    @And("^Assert both addresses$")
     public void assertBothAddressess() {
         String nisumAddressSubstr = nisumAddress.substring(6, 36);
         String googleAddressSubstr = googleAddress.substring(11, 41);
-        String replaceChargoogle = googleAddressSubstr.replace("،", ",");
-        Assert.assertEquals(nisumAddressSubstr, replaceChargoogle);
+        String replaceCharGoogle = googleAddressSubstr.replace("،", ",");
+        Assert.assertEquals(nisumAddressSubstr, replaceCharGoogle);
 
     }
 }

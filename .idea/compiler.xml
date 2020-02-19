@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="NisumSelenium" />
         <module name="ApiFrameworkTask" />
+        <module name="Nisum.com-selenium" />
         <module name="frameworktask" />
       </profile>
     </annotationProcessing>

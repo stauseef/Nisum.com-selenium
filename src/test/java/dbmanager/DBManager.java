@@ -5,7 +5,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class DBManager {
-    public static void main(String[] args) throws SQLException{
+    public static void execute() throws SQLException{
         String q ="Select * from Products";
         String[][] result = FetchDataFromDB(q);
         System.out.println(result);
