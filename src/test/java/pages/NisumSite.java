@@ -35,9 +35,6 @@ public class NisumSite extends Utilities {
         country.click();
     }
 
-    public String getAddress(){
-        mainDiv.findElement()
-    }
 
 
 
