@@ -5,6 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import resources.Utilities;
 
 import java.util.concurrent.TimeUnit;
@@ -28,7 +31,9 @@ public class Google extends Utilities {
     }
 
     public void webPageLoadsPage() {
-        driver.manage().timeouts().implicitlyWait(6, TimeUnit.SECONDS);
+        //WebDriverWait wdw = new WebDriverWait(driver,5);
+        //wdw.until(ExpectedConditions.visibilityOf(div));
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         div.isDisplayed();
     }
 
@@ -36,8 +41,5 @@ public class Google extends Utilities {
         WebElement extractAdd= div.findElement(By.cssSelector("span[class='LrzXr']"));
         return extractAdd.getText();
     }
-
-
-
 
 }

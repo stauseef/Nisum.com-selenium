@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66dc19cd-1888-4f54-bf31-953d73910ccd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dbmanager/DBManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dbmanager/DBManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dbmanager/WebDriverManagerSingleton.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/definitions/Stepdefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/definitions/Stepdefinitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/Google.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/Google.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/NisumSite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/NisumSite.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/resources/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/Utilities.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/NisumTask.features" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/NisumTask.features" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/global.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/global.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,8 +55,12 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="stepDefinitions" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\stauseef\IdeaProjects\ApiFrameworkTask\src\test\java\resources" />
+      <recent name="C:\Users\stauseef\IdeaProjects\ApiFrameworkTask\src\test\resources" />
+      <recent name="C:\Users\stauseef\IdeaProjects\ApiFrameworkTask\src\test" />
+      <recent name="C:\Users\stauseef\IdeaProjects\ApiFrameworkTask\src\test\java" />
+      <recent name="C:\Users\stauseef\IdeaProjects\ApiFrameworkTask\src\test\java\features" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\stauseef\IdeaProjects\Nisum.com-selenium\src\test\java\resources" />
@@ -70,12 +71,8 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="dbmanager" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\stauseef\IdeaProjects\ApiFrameworkTask\src\test\java\resources" />
-      <recent name="C:\Users\stauseef\IdeaProjects\ApiFrameworkTask\src\test\resources" />
-      <recent name="C:\Users\stauseef\IdeaProjects\ApiFrameworkTask\src\test" />
-      <recent name="C:\Users\stauseef\IdeaProjects\ApiFrameworkTask\src\test\java" />
-      <recent name="C:\Users\stauseef\IdeaProjects\ApiFrameworkTask\src\test\java\features" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="stepDefinitions" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -83,7 +80,7 @@
       <command value="mvn install" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestRunner">
+  <component name="RunManager" selected="Application.actions">
     <configuration name="DBManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="dbmanager.DBManager" />
       <module name="NisumSelenium" />
@@ -97,17 +94,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Feature: NisumTask" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="4.5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/NisumTask.features" />
-      <option name="GLUE" value="definitions" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="NisumSelenium" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm4SMFormatter" />
-      <option name="SUGGESTED_NAME" value="Feature: NisumTask" />
+    <configuration name="actions" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="runner.actions" />
+      <module name="Nisum.com-selenium" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="PATTERN" value="runner.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -168,11 +160,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.actions" />
         <item itemvalue="JUnit.TestRunner" />
         <item itemvalue="JUnit.TestRunner (1)" />
         <item itemvalue="Application.DBManager" />
         <item itemvalue="Cucumber java.Scenario: Verify Karachi office address is same on nisum site and google" />
-        <item itemvalue="Cucumber java.Feature: NisumTask" />
       </list>
     </recent_temporary>
   </component>
@@ -249,10 +241,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="378" y="290" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1366.728@0.0.1366.728" timestamp="1581688690065" />
-    <state x="479" y="224" width="408" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1581688722759">
+    <state x="479" y="224" width="408" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1582575479028">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="479" y="224" width="408" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1581688722759" />
+    <state x="479" y="224" width="408" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1582575479028" />
     <state x="413" y="112" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581598984757">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -273,38 +265,38 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="120" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1581941324595" />
-    <state width="1323" height="211" key="GridCell.Tab.0.bottom" timestamp="1582096725288">
+    <state width="1323" height="162" key="GridCell.Tab.0.bottom" timestamp="1583247089038">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="211" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582096725288" />
-    <state width="1323" height="211" key="GridCell.Tab.0.center" timestamp="1582096725288">
+    <state width="1323" height="162" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1583247089038" />
+    <state width="1323" height="162" key="GridCell.Tab.0.center" timestamp="1583247089038">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="211" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1582096725288" />
-    <state width="1323" height="211" key="GridCell.Tab.0.left" timestamp="1582096725288">
+    <state width="1323" height="162" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1583247089038" />
+    <state width="1323" height="162" key="GridCell.Tab.0.left" timestamp="1583247089038">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="211" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1582096725288" />
-    <state width="1323" height="211" key="GridCell.Tab.0.right" timestamp="1582096725288">
+    <state width="1323" height="162" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1583247089038" />
+    <state width="1323" height="162" key="GridCell.Tab.0.right" timestamp="1583247089038">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="211" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1582096725288" />
-    <state width="1323" height="286" key="GridCell.Tab.1.bottom" timestamp="1582096316990">
+    <state width="1323" height="162" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1583247089038" />
+    <state width="1323" height="303" key="GridCell.Tab.1.bottom" timestamp="1582103133007">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="286" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582096316990" />
-    <state width="1323" height="286" key="GridCell.Tab.1.center" timestamp="1582096316990">
+    <state width="1323" height="303" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582103133007" />
+    <state width="1323" height="303" key="GridCell.Tab.1.center" timestamp="1582103133007">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="286" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1582096316990" />
-    <state width="1323" height="286" key="GridCell.Tab.1.left" timestamp="1582096316990">
+    <state width="1323" height="303" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1582103133007" />
+    <state width="1323" height="303" key="GridCell.Tab.1.left" timestamp="1582103133007">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="286" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1582096316990" />
-    <state width="1323" height="286" key="GridCell.Tab.1.right" timestamp="1582096316990">
+    <state width="1323" height="303" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1582103133007" />
+    <state width="1323" height="303" key="GridCell.Tab.1.right" timestamp="1582103133007">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="286" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1582096316990" />
+    <state width="1323" height="303" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1582103133007" />
     <state x="213" y="20" key="Maven.ArtifactSearchDialog" timestamp="1581694978051">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -313,18 +305,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1581340865592" />
-    <state x="275" y="98" key="Vcs.Push.Dialog.v2" timestamp="1581515823890">
+    <state x="275" y="98" key="Vcs.Push.Dialog.v2" timestamp="1583236584208">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="98" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1581515823890" />
-    <state x="379" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1581663796453">
+    <state x="275" y="98" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1583236584208" />
+    <state x="379" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1583230679850">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="189" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1581663796453" />
-    <state x="379" y="96" width="607" height="536" key="find.popup" timestamp="1582037870584">
+    <state x="379" y="189" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1583230679850" />
+    <state x="379" y="96" width="607" height="536" key="find.popup" timestamp="1583232681103">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="96" width="607" height="536" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1582037870584" />
+    <state x="379" y="96" width="607" height="536" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1583232681103" />
     <state x="435" y="286" key="org.jetbrains.plugins.cucumber.inspections.ui.CreateStepDefinitionFileDialog" timestamp="1581320719944">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -341,21 +333,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/resources/Utilities.java</url>
-          <line>34</line>
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/resources/Utilities.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="27" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/resources/Utilities.java</url>
-          <line>36</line>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/dbmanager/DBManager.java</url>
           <line>13</line>
@@ -380,11 +357,6 @@
           <url>file://$PROJECT_DIR$/src/test/java/dbmanager/DBManager.java</url>
           <line>14</line>
           <option name="timeStamp" value="76" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/definitions/Stepdefinitions.java</url>
-          <line>111</line>
-          <option name="timeStamp" value="108" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

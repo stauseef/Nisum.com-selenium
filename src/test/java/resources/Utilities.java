@@ -29,7 +29,7 @@ public class Utilities {
         return propOjb.getProperty(key);
     }
 
-    public String getJsonPath(Response response, String key){
+    public String getJsonPath(Response response, String key) {
         String res = response.asString();
         jPath = new JsonPath(res);
         return jPath.get(key).toString();
@@ -37,10 +37,8 @@ public class Utilities {
     }
 
     public static void initialization() throws IOException {
-        String browserName =getGlobalValues("browser");
+        String browserName = getGlobalValues("browser");
         if (browserName.equals("chrome")) {
-
-
             // System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/driver/chromedriver.exe");
             WebDriverManager.chromedriver().setup();
             ChromeOptions options = new ChromeOptions();
@@ -50,11 +48,11 @@ public class Utilities {
             WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver();
         }
-        /*e_driver = new EventFiringWebDriver(driver);
+        e_driver = new EventFiringWebDriver(driver);
         // Now create object of EventListerHandler to register it with EventFiringWebDriver
         eventListener = new WebEventListener();
         e_driver.register(eventListener);
-        driver = e_driver;*/
+        driver = e_driver;
 
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();

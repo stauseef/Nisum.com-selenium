@@ -18,8 +18,6 @@ import resources.Utilities;
 import java.io.IOException;
 
 
-import java.util.concurrent.TimeUnit;
-
 public class Stepdefinitions extends Utilities {
     public static boolean windowMaximize = false;
     public String baseUrl;
@@ -47,7 +45,6 @@ public class Stepdefinitions extends Utilities {
 
     @When("^Select \"([^\"]*)\" From Our offices seciton$")
     public void selectFromOurOfficesSeciton(String country) {
-        WebElement searchCountry = driver.findElement(By.linkText(country));
         NisumSite nisumSite = new NisumSite();
         nisumSite.clickOnCountryOption();
         mainDiv = nisumSite.mainDivNisum;
@@ -77,7 +74,6 @@ public class Stepdefinitions extends Utilities {
         driver.navigate().to(website);
         Google g = new Google();
         g.search(searchKey);
-
 
     }
 
