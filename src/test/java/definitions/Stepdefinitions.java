@@ -5,6 +5,7 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import dbmanager.DataBaseConnection;
 import org.junit.Assert;
 
 import org.openqa.selenium.By;
@@ -16,6 +17,7 @@ import resources.Utilities;
 
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 
 public class Stepdefinitions extends Utilities {
@@ -31,8 +33,10 @@ public class Stepdefinitions extends Utilities {
      */
 
     @Given("^Go to nisum's website$")
-    public void goToNisumSWebsite() throws IOException {
-
+    public void goToNisumSWebsite() throws IOException, SQLException, ClassNotFoundException {
+      DataBaseConnection dbc = new DataBaseConnection();
+        dbc.database();
+       // DBManager.execute();
         Utilities.initialization();
         baseUrl = getGlobalValues("baseUrl");
         driver.get(baseUrl);

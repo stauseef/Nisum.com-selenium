@@ -2,12 +2,11 @@ package resources;
 
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import io.restassured.path.json.JsonPath;
-import io.restassured.response.Response;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import java.io.*;
@@ -19,7 +18,7 @@ public class Utilities {
     public static WebDriver driver;
     public static EventFiringWebDriver e_driver;
     public static WebEventListener eventListener;
-    JsonPath jPath;
+
 
     public static String getGlobalValues(String key) throws IOException {
         Properties propOjb = new Properties();
@@ -29,19 +28,15 @@ public class Utilities {
         return propOjb.getProperty(key);
     }
 
-    public String getJsonPath(Response response, String key) {
-        String res = response.asString();
-        jPath = new JsonPath(res);
-        return jPath.get(key).toString();
-
-    }
-
     public static void initialization() throws IOException {
         String browserName = getGlobalValues("browser");
         if (browserName.equals("chrome")) {
             // System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/driver/chromedriver.exe");
+            DesiredCapabilities dS = new DesiredCapabilities().chrome();
+            dS.acceptInsecureCerts();
             WebDriverManager.chromedriver().setup();
             ChromeOptions options = new ChromeOptions();
+            options.merge(dS);
             options.addArguments("--no-sandbox");
             driver = new ChromeDriver(options);
         } else if (browserName.equals("FF")) {

@@ -3,7 +3,7 @@ package dbmanager;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import java.sql.*;
-public class DataBaseCon {
+public class DataBaseConNotUsedNow {
     /*private static final Logger log = LoggerFactory.getLogger(DataBaseCon.class);
     public void connectSql() {
         try {
@@ -22,7 +22,7 @@ public class DataBaseCon {
             log.info("exception" + e);
         }
     }*/
-    public static final Logger logger = LogManager.getLogger(DataBaseCon.class);
+    public static final Logger logger = LogManager.getLogger(DataBaseConNotUsedNow.class);
     private Connection conn = null;
     private ResultSet currentRS = null;
     private String DbURL = "db4free.net:3306/db_autofrat";
